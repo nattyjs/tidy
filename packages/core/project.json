@@ -1,0 +1,24 @@
+{
+    "name": "tidyjs",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/forms",
+    "projectType": "library",
+    "tags": [],
+    "targets": {
+      "lint": {
+        "executor": "@nx/linter:eslint",
+        "outputs": ["{options.outputFile}"],
+        "options": {
+          "lintFilePatterns": ["packages/forms/**/*.{ts,tsx,js,jsx}"]
+        }
+      },
+      "test": {
+        "executor": "@nx/jest:jest",
+        "outputs": ["{workspaceRoot}/coverage/packages/forms"],
+        "options": {
+          "jestConfig": "packages/forms/jest.config.ts",
+          "passWithNoTests": true
+        }
+      }
+    }
+  }

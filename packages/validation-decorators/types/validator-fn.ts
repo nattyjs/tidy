@@ -1,0 +1,1 @@
+export type ValidatorFn = null| {[key:string]:any};

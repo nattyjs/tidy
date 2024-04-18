@@ -1,0 +1,16 @@
+export const SanitizerNames = {
+    blacklist:'blacklist',
+    escape:'escape',
+    ltrim:'ltrim',
+    prefix:'prefix',
+    rtrim:'rtrim',
+    sanitize:'sanitize',
+    stripLow:'stripLow',
+    suffix:'suffix',
+    toBoolean:'toBoolean',
+    toDate:'toDate',
+    toInt:'toInt',
+    toString:'toString',
+    trim:'trim',
+    whitelist:'whitelist',
+}

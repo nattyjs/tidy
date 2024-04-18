@@ -1,0 +1,19 @@
+{
+  "name": "@tidyjs/types",
+  "version": "0.0.1-beta.28",
+  "keywords": [],
+  "author": "ajayojha <ojhaajay@outlook.com>",
+  "license": "ISC",
+  "description": "",
+  "main": "./dist/index.d.ts",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild"
+  },
+  "devDependencies": {
+    "unbuild": "1.2.1"
+  }
+}

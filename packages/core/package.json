@@ -1,0 +1,23 @@
+{
+  "name": "tidyjs",
+  "version": "0.0.1-beta.28",
+  "description": "",
+  "keywords": [],
+  "module": "./dist/index.mjs",
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild"
+  },
+  "author": "ajayojha",
+  "license": "MIT",
+  "dependencies": {
+    "@tidyjs/validation-decorators": "0.0.1-beta.28"
+  },
+  "devDependencies": {
+    "unbuild": "1.2.1"
+  }
+}
