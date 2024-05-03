@@ -1,4 +1,4 @@
-import { PropertyDecoratorConfig } from "@tidyjs/types";
+import { PropertyDecoratorConfig } from "@nattyjs/types";
 
 export const decoratorRegistrationCaller:
     {

@@ -1,31 +1,11 @@
 {
     "files": [],
     "references": [
-      {
-        "path": "./common/tsconfig.build.json"
-      },
-
-      {
-        "path": "./azure-functions/tsconfig.build.json"
-      },
-      {
-        "path": "./cli/tsconfig.build.json"
-      },
+      
       {
         "path": "./core/tsconfig.build.json"
       },
-      {
-        "path": "./entity/tsconfig.build.json"
-      },
-      {
-        "path": "./forms/tsconfig.build.json"
-      },
-      {
-        "path": "./orm/tsconfig.build.json"
-      },
-      {
-        "path": "./types/tsconfig.build.json"
-      },
+      
       {
         "path": "./validation-decorators/tsconfig.build.json"
       }

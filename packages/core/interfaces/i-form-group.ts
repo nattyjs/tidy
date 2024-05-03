@@ -1,4 +1,4 @@
-import { ValidatorFn } from "@tidyjs/validation-decorators";
+import { ValidatorFn } from "@nattyjs/validation-decorators";
 
 export interface IFormGroup{
     get valid():boolean;

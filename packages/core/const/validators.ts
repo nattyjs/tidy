@@ -1,5 +1,5 @@
 
-import { AlphaConfig, ArrayConfig,DefaultConfig, ControlValidators, RequiredConfig, ValidatorFn, CreditCardConfig, DifferentConfig, DigitConfig, EmailConfig, ExtensionConfig, FactorConfig, RelationalOperatorConfig, HexColorConfig, IpConfig, MessageConfig, MaxDateConfig, NumberConfig, MaxTimeConfig, MinDateConfig, MinTimeConfig, NumericConfig, PasswordConfig, PatternConfig, RangeConfig, TimeConfig, BaseValidatorConfig } from '@tidyjs/validation-decorators'
+import { AlphaConfig, ArrayConfig,DefaultConfig, ControlValidators, RequiredConfig, ValidatorFn, CreditCardConfig, DifferentConfig, DigitConfig, EmailConfig, ExtensionConfig, FactorConfig, RelationalOperatorConfig, HexColorConfig, IpConfig, MessageConfig, MaxDateConfig, NumberConfig, MaxTimeConfig, MinDateConfig, MinTimeConfig, NumericConfig, PasswordConfig, PatternConfig, RangeConfig, TimeConfig, BaseValidatorConfig } from '@nattyjs/validation-decorators'
 import { callValidator } from '../functions/call-validators'
 export const Validators={
     required:(config?:RequiredConfig)=>callValidator(config,ControlValidators.required),

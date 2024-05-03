@@ -1,4 +1,4 @@
-import { ValidatorFn } from "@tidyjs/validation-decorators";
+import { ValidatorFn } from "@nattyjs/validation-decorators";
 
 type PropValidator = {
     config:any,

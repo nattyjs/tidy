@@ -10,6 +10,6 @@ export default defineBuildConfig({
   entries: [
     './index'
   ],
-  externals:['@tidyjs/validation-decorators']
+  externals:['@nattyjs/validation-decorators']
   
 })

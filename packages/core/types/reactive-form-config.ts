@@ -1,4 +1,4 @@
-import {  PropConfig } from "@tidyjs/types"
+import {  PropConfig } from "@nattyjs/types"
 export type ValidatorInfo ={[key:string]:any} 
 export type PropertyInfo = {
     propConfig?:PropConfig;

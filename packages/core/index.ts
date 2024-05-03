@@ -1,8 +1,8 @@
-import { decoratorRegistrationCaller } from '@tidyjs/validation-decorators'
+import { decoratorRegistrationCaller } from '@nattyjs/validation-decorators'
 import { ReactiveFormContainer } from './const/reactive-form-container'
 decoratorRegistrationCaller.register = ReactiveFormContainer.register as any;
 export * from './functions/use-form';
-export * from './const/natty-forms';
+export * from './const/configure';
 export {
     decoratorAllOfValidation as allOf,
     decoratorRequiredValidation as required,
@@ -72,8 +72,7 @@ export {
     decoratorSanitizeSanitizer as sanitize
 
 
-} from '@tidyjs/validation-decorators'
+} from '@nattyjs/validation-decorators'
 export * from './const/validators'
 export * from './enums/run-validator-strategy'
 export * from './interfaces/i-form-group'
-console.log("local link")

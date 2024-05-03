@@ -1,5 +1,5 @@
 {
-    "name": "tidyjs",
+    "name": "@nattyjs/tidy",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "packages/forms",
     "projectType": "library",

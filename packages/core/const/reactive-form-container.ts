@@ -1,4 +1,4 @@
-import { PropertyDecoratorConfig } from "@tidyjs/types";
+import { PropertyDecoratorConfig } from "@nattyjs/types";
 import { EntityInfo, PropertyInfo, ValidatorInfo } from "../types/reactive-form-config";
 
 export class ReactiveFormContainer{
