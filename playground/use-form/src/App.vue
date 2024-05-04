@@ -1,23 +1,30 @@
 <script setup lang="ts">
 import { configure, useForm, Validators } from '@nattyjs/tidy';
+import { reactive } from 'vue';
 configure({
   errorMessage:{
     validator:{
-      required:'This field is required.'
+      required:'This field is required.',
+      minLength:'This field is minLength.',
+      alphaNumeric:'This field is alphaNumeric.',
+      maxLength:'This field is maxLength.'
     }
   }
 })
 const user = {userName:''};
-const form = useForm(user,{
+debugger;
+const form = reactive( useForm(user,{
     validators:{
       userName:[
-      Validators.required(),
-      Validators.minLength({value:6}),
-      Validators.alphaNumeric(),
-      Validators.maxLength({value:10})
+        Validators.compose({validators:[
+          Validators.required(),
+          Validators.minLength({value:6}),
+          Validators.alphaNumeric(),
+          Validators.maxLength({value:10})
+      ]})
       ]
     }
-  })
+  }))
 
 function submit(){
 console.log(form.userName)

@@ -8,11 +8,11 @@ import { ValidatorFn } from "../types/validator-fn";
 
   export function composeValidator(configModel: ComposeConfig,control:ValidatorParams): ValidatorFn {
       let config = getConfigObject(configModel);
-      if (ValidatorValueChecker.pass(control, config)) {
+      if (ValidatorValueChecker.pass(control, config,true)) {
         if (config.validators) {
           let result = undefined;
           for (let validator of config.validators) {
-            result = validator(control);
+            result = validator.validator(control);
             if (result)
               break;
             }

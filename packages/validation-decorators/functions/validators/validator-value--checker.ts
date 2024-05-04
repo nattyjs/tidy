@@ -4,9 +4,9 @@ import { RegexValidator } from "./regex-validator";
 
 export class ValidatorValueChecker {
 
-  static pass(params: ValidatorParams, config: any): boolean {
+  static pass(params: ValidatorParams, config: any,isContinue:boolean= false): boolean {
     if (Linq.execute(config,params))
-      return RegexValidator.isNotBlank(params.value)
+      return isContinue || RegexValidator.isNotBlank(params.value)
     else
       return false;
   }
