@@ -3,7 +3,9 @@ import { ReactiveFormContainer } from './const/reactive-form-container'
 decoratorRegistrationCaller.register = ReactiveFormContainer.register as any;
 export * from './functions/use-form';
 export * from './const/configure';
-export {
+export { 
+    ValidatorParams as ParamInfo,
+    ValidatorFn as ValidatorFunc,
     decoratorAllOfValidation as allOf,
     decoratorRequiredValidation as required,
     decoratorNumericValidation as numeric,

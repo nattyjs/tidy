@@ -38,3 +38,4 @@ export * from "./interfaces/validator-config/base-validator-config";
 export * from "./interfaces/validator-config/compose-config";
 export * from "./const/natty-forms";
 export * from "./interfaces/form-config";
+export * from './interfaces/validator-params';
