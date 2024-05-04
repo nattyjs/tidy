@@ -4,6 +4,7 @@ export const ValidatorNames = {
     alpha:'alpha',
     alphaNumeric:'alphaNumeric',
     ascii:'ascii',
+    custom:'custom',
     compose:'compose',
     contains:'contains',
     creditCard:'creditCard',
