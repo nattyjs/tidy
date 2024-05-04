@@ -35,5 +35,6 @@ export * from "./interfaces/validator-config/string-value-config";
 export * from "./interfaces/validator-config/time-config";
 export * from "./interfaces/validator-config/url-config";
 export * from "./interfaces/validator-config/base-validator-config";
+export * from "./interfaces/validator-config/compose-config";
 export * from "./const/natty-forms";
 export * from "./interfaces/form-config";
