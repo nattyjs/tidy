@@ -13,6 +13,8 @@ export class FormGroup {
     private properties: Array<string> = new Array<string>();
     private validators: any;
     parent: FormGroup;
+    pending:boolean = false;
+    dirty:{[key:string]:boolean}= {};
     private runConditionally: { [key: string]: string[] } = {};
     private sanitizeProps: { [key: string]: { name: string, config: any, func: Function } } = {};
     private childrens: Map<string, FormGroup | FormArray> = new Map<string, FormGroup | FormArray>();
@@ -186,6 +188,7 @@ export class FormGroup {
         Object.defineProperty(this, propName, {
             get: () => _propValue,
             set: (value) => {
+                this.dirty[propName]=true;
                 _propValue=value;
                 this.clearErrorMessage(propName)
                 delete this._serverErrors[propName];
@@ -205,15 +208,19 @@ export class FormGroup {
 
     private runValidator(propName: string) {
         if ((nattyForms.formConfig?.runValidatorStrategy && nattyForms.formConfig?.runValidatorStrategy == RunValidatorStrategy.OnSubmit && this.submit) || !(nattyForms.formConfig?.runValidatorStrategy))
-            if (this.validators) {
-                const validator = this.validators[propName];
-                if (validator) {
-                    const errors = this.runValidation(validator, { name: propName, value: this._value[propName], current: this, root: this.root })
-                    if (errors)
-                        this._errors[propName] = errors;
-                    else if (this._errors[propName])
-                        delete this._errors[propName]
+            {
+                this.pending = true
+                if (this.validators) {
+                    const validator = this.validators[propName];
+                    if (validator) {
+                        const errors = this.runValidation(validator, { name: propName, value: this._value[propName], current: this, root: this.root })
+                        if (errors)
+                            this._errors[propName] = errors;
+                        else if (this._errors[propName])
+                            delete this._errors[propName]
+                    }
                 }
+                this.pending = false;
             }
     }
 
