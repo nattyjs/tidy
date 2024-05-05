@@ -53,6 +53,7 @@ import {
   timeValidator,
   uppercaseValidator,
   urlValidator,
+  customValidator,
 } from "../validators";
 
 export const ControlValidators = {
@@ -62,6 +63,7 @@ export const ControlValidators = {
   alphaNumeric: alphaNumericValidator,
   ascii: asciiValidator,
   compose:composeValidator,
+  custom:customValidator,
   contains: containsValidator,
   creditCard: creditCardValidator,
   cusip: cusipValidator,

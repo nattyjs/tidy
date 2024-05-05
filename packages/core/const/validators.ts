@@ -8,6 +8,7 @@ export const Validators={
     alpha:(config?:AlphaConfig)=>callValidator(config,ControlValidators.alpha),
     ascii:(config?:BaseValidatorConfig)=>callValidator(config,ControlValidators.ascii),
     compose:(config?:ComposeConfig)=>callValidator(config,ControlValidators.compose),
+    custom:(config?:ComposeConfig)=>callValidator(config,ControlValidators.custom),
     contains:(config?:DefaultConfig)=>callValidator(config,ControlValidators.contains),
     creditCard:(config?: CreditCardConfig)=>callValidator(config,ControlValidators.creditCard),
     cusip:(config?:BaseValidatorConfig)=>callValidator(config,ControlValidators.cusip),
