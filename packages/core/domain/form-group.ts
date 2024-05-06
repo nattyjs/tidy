@@ -119,7 +119,7 @@ export class FormGroup {
                 this._serverErrors[key]=value;
                 this.setErrorMessage(key,{server:{message:value}})
             }
-                
+                 
         }
     }
 
@@ -166,8 +166,10 @@ export class FormGroup {
                 this.defineGroupProp(key, new FormArray(value, {
                     validators: this.validators[key] ? this.validators[key][0] : undefined, parent: this, root: this.root
                 }, FormGroup))
+                delete this.validators[key];
             } else if (isObject(value)) {
                 this.defineGroupProp(key, new FormGroup(this._value[key], { parent: this, root: this.root || this, validators: this.validators[key] }))
+                delete this.validators[key];
             } else{
                 
                 this.defineProp(key, this._value, this.validators[key])

@@ -19,9 +19,19 @@ export class FormArray extends Array{
             const typeFormGroup = this.typeFormGroup;
             const formGroup = new typeFormGroup(t,this.params);
             this.childrens.push(formGroup);
-            this.push(formGroup)
+            super.push(formGroup);
         })
     }
+
+    insert(item:any){
+        this.init([item])
+        
+    }
+
+    removeAt(index:number){
+        super.splice(index,1)
+    }
+        
     get errors(){
         const errors = [];
         this.childrens.forEach((t,index)=>{
