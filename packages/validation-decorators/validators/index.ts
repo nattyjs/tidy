@@ -1,6 +1,6 @@
 export * from './alpha.validator';
 export * from './alphaNumeric.validator';
-//export * from './compare.validator';
+export * from './compare.validator';
 export * from './compose.validator';
 export * from './custom.validator';
 export * from './contains.validator';

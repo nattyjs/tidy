@@ -54,6 +54,7 @@ import {
   uppercaseValidator,
   urlValidator,
   customValidator,
+  compareValidator,
 } from "../validators";
 
 export const ControlValidators = {
@@ -62,6 +63,7 @@ export const ControlValidators = {
   alpha: alphaValidator,
   alphaNumeric: alphaNumericValidator,
   ascii: asciiValidator,
+  compare:compareValidator,
   compose:composeValidator,
   custom:customValidator,
   contains: containsValidator,

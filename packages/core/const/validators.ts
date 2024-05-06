@@ -1,5 +1,5 @@
 
-import { AlphaConfig, ArrayConfig,DefaultConfig,ComposeConfig, ControlValidators, RequiredConfig, ValidatorFn, CreditCardConfig, DifferentConfig, DigitConfig, EmailConfig, ExtensionConfig, FactorConfig, RelationalOperatorConfig, HexColorConfig, IpConfig, MessageConfig, MaxDateConfig, NumberConfig, MaxTimeConfig, MinDateConfig, MinTimeConfig, NumericConfig, PasswordConfig, PatternConfig, RangeConfig, TimeConfig, BaseValidatorConfig, DateConfig } from '@nattyjs/validation-decorators'
+import { AlphaConfig, ArrayConfig,DefaultConfig,ComposeConfig, ControlValidators, RequiredConfig, ValidatorFn, CreditCardConfig, DifferentConfig, DigitConfig, EmailConfig, ExtensionConfig, FactorConfig, RelationalOperatorConfig, HexColorConfig, IpConfig, MessageConfig, MaxDateConfig, NumberConfig, MaxTimeConfig, MinDateConfig, MinTimeConfig, NumericConfig, PasswordConfig, PatternConfig, RangeConfig, TimeConfig, BaseValidatorConfig, DateConfig, CompareConfig } from '@nattyjs/validation-decorators'
 import { callValidator } from '../functions/call-validators'
 export const Validators={
     required:(config?:RequiredConfig)=>callValidator(config,ControlValidators.required),
@@ -7,6 +7,7 @@ export const Validators={
     alphaNumeric:(config?:AlphaConfig)=>callValidator(config,ControlValidators.alphaNumeric),
     alpha:(config?:AlphaConfig)=>callValidator(config,ControlValidators.alpha),
     ascii:(config?:BaseValidatorConfig)=>callValidator(config,ControlValidators.ascii),
+    compare:(config?:CompareConfig)=>callValidator(config,ControlValidators.compare),
     compose:(config?:ComposeConfig)=>callValidator(config,ControlValidators.compose),
     custom:(config?:ComposeConfig)=>callValidator(config,ControlValidators.custom),
     contains:(config?:DefaultConfig)=>callValidator(config,ControlValidators.contains),

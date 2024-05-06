@@ -6,6 +6,7 @@ export * from "./const/control-validators";
 export * from "./interfaces/validator-config/required-config";
 export * from "./interfaces/validator-config/alpha-config";
 export * from "./interfaces/validator-config/array-config";
+export * from "./interfaces/validator-config/compare-config";
 export * from "./interfaces/validator-config/contains-config";
 export * from "./interfaces/validator-config/credit-card-config";
 export * from "./interfaces/validator-config/date-config";
