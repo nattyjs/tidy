@@ -1,4 +1,4 @@
-## **Tidy.js: Effortless Form Validation**
+## **@tidy: Effortless Form Validation**
 
 **A lightweight, flexible, and powerful form validation library for modern web development.**
 
@@ -106,8 +106,11 @@ const form = reactive(useForm({
 
 ### License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](./LICENSE).
+
 
 **Contributing**
 
-We welcome contributions to <b>@tidy!</b> Please refer to our contribution guidelines for more information.
+We welcome contributions to <b>@tidy!</b> Please refer to our [contribution guidelines for more information](docs/content/community/contribution.md).
+
+Love @tidy? Give our repo a star ⭐ ⬆️.
