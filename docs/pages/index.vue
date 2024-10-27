@@ -18,41 +18,6 @@ useSeoMeta({
 </script>
 
 <template>
-  <!-- <div>
-    <div>
-      <div>
-        <div>
-          <h1>{{ page?.hero.title }}</h1>
-          <p>{{ page?.hero.description }}</p>
-        </div>
-        <div>
-          <NuxtLink :to="page?.hero.links[0].to" target="_blank">
-            {{ page?.hero.links[0].icon }}
-            {{ page?.hero.links[0].label }}
-          </NuxtLink>
-        </div>
-      </div>
-      <div>
-        <MDC :value="page?.hero.title" />
-      </div>
-
-      <div>
-        <MDC :value="page?.hero?.code" tage="pre" />
-      </div>
-      <div>
-        <h1>{{ page?.features?.title }}</h1>
-        <NuxtLink :to="page?.features?.links[0].to">{{
-          page?.features.links[0].label
-        }}</NuxtLink>
-        <div class="flex">
-          <div v-for="item in page?.features?.items" :key="item?.title">
-            <p>{{ item?.title }}</p>
-            <p>{{ item?.description }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
   <div>
     <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-10 md:my-32">
       <div class="grid grid-cols-12 items-center">
@@ -70,7 +35,7 @@ useSeoMeta({
             </p>
           </div>
           <div class="">
-            <NuxtLink :to="page?.hero.links[0].to" target="_blank">
+            <NuxtLink :to="page?.hero.links[0].to">
               <button
                 class="border flex items-center gap-x-1.5 py-2 px-3 rounded-md bg-[#00C16A] tracking-wide text-sm font-medium text-white hover:bg-green-600"
               >
