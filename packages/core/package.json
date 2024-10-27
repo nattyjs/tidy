@@ -1,6 +1,6 @@
 {
   "name": "@nattyjs/tidy",
-  "version": "0.0.1-beta.28",
+  "version": "0.0.1-beta.31",
   "description": "",
   "keywords": [],
   "module": "./dist/index.mjs",
