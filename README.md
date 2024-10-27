@@ -110,4 +110,4 @@ This project is licensed under the MIT License.
 
 **Contributing**
 
-We welcome contributions to <b>@tidy!</b> Please refer to our contribution guidelines for more information.
+We welcome contributions to <b>@tidy!</b> Please refer to our [contribution guidelines for more information](docs/content/community/contribution.md).
