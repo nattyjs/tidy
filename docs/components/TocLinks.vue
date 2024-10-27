@@ -5,10 +5,10 @@
     </h5>
     <p v-for="item,index in toclinks" :key="index" class="py-[3px]">
       <NuxtLink
-        class="text-sm mt-1 font-DMSans_Regular text-gray-500 hover:text-green-400 cursor-pointer py-1"
+        class="text-sm mt-1 font-bold font-DMSans_Regular text-gray-500 hover:text-green-400 cursor-pointer py-1"
         :to="route.path + '#' + item?.id" :class="{'text-green-500': route.hash === `#${item.id}`}"
         >{{ item.text }}</NuxtLink >
-      <ul v-if="item?.children" >
+      <ul class="pl-4" v-if="item?.children" >
         <li v-for="link,index in item['children']" :key="index" >
         <NuxtLink
         class="text-sm mt-1 font-DMSans_Regular text-gray-500 hover:text-gray-700 cursor-pointer py-1"
