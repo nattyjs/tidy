@@ -108,8 +108,9 @@ const form = reactive(useForm({
 
 This project is licensed under the MIT License.
 
-Love @tidy? Give our repo a star ⭐ ⬆️.
 
 **Contributing**
 
 We welcome contributions to <b>@tidy!</b> Please refer to our [contribution guidelines for more information](docs/content/community/contribution.md).
+
+Love @tidy? Give our repo a star ⭐ ⬆️.
