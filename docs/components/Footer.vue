@@ -15,15 +15,12 @@ import twitterIcon from "./icon/twitter.icon.vue";
           <p
             class="text-sm font-DMSans_Regular text-gray-500 max-lg:text-center lg:text-center md:order-2 lg:order-1"
           >
-            Copyright © 2023
+           <a href="https://radixweb.com/" class="hover:underline"">Developed & Maintained By <b>Radixians</b></a>
           </p>
           <div
             class="flex items-center lg:pe-4 space-x-4 max-lg:text-center lg:text-center md:order-1 lg:order-2"
           >
-            <span><facebook-icon class="w-5 fill-gray-700 cursor-pointer" /></span>
-            <span><discordIcon class="w-5 fill-gray-700 cursor-pointer" /></span>
-            <span><twitter-icon class="w-5 fill-gray-700 cursor-pointer" /></span>
-            <span><github-icon class="w-5 fill-gray-700 cursor-pointer" /></span>
+            <span><a href="https://github.com/nattyjs/tidy"><github-icon class="w-5 fill-gray-700 cursor-pointer" /></a></span>
           </div>
         </div>
       </div>
