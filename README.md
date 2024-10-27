@@ -1,4 +1,4 @@
-## **Tidy.js: Effortless Form Validation**
+## **@tidy: Effortless Form Validation**
 
 **A lightweight, flexible, and powerful form validation library for modern web development.**
 
