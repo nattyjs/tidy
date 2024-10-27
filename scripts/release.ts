@@ -20,8 +20,7 @@ import  semver from 'semver'
 import  fs from 'fs'
 import {globby} from 'globby';
 import {execa} from 'execa';
-// console.log(globby)
-const packages = ["testing","firebase-functions","azure-functions","cli","common","core","entity","express","forms","orm","types","validation-decorators"];
+const packages = ["core","types","validation-decorators"];
 const rootDir = process.cwd();
 const packagesFolderName = 'packages';
 const semverParamConfig = {
