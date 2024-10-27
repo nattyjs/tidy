@@ -1,3 +1,17 @@
+## 0.0.1-beta.32 (2024-10-27)
+
+
+### Bug Fixes
+
+* **validation-decorators:** call validator function from compose ([2257a63](https://github.com/nattyjs/tidy/commit/2257a638ca5bf5d30d9a5e16ba0d5a6bcf0bbca4))
+
+
+### Features
+
+* **tidy:** add dirty and pending state ([d9e624a](https://github.com/nattyjs/tidy/commit/d9e624a3192a92acbb4f6fb753167aeeae711a4e))
+
+
+
 ## 0.0.1-beta.28 (2024-02-28)
 
 

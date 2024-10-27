@@ -1,3 +1,18 @@
+## 0.0.1-beta.32 (2024-10-27)
+
+
+### Bug Fixes
+
+* **validation-decorators:** call validator function from compose ([2257a63](https://github.com/nattyjs/tidy/commit/2257a638ca5bf5d30d9a5e16ba0d5a6bcf0bbca4))
+
+
+### Features
+
+* **validation-decorators:** add compose validator ([4cd9de4](https://github.com/nattyjs/tidy/commit/4cd9de46953b774db9ab11a34666545a0de59022))
+* **validation-decorators:** add custom validator ([465ba13](https://github.com/nattyjs/tidy/commit/465ba134c553e021162c95b570f8793dc9066cf8))
+
+
+
 ## 0.0.1-beta.28 (2024-02-28)
 
 

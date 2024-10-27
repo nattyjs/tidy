@@ -1,6 +1,6 @@
 {
   "name": "@nattyjs/tidy",
-  "version": "0.0.1-beta.31",
+  "version": "0.0.1-beta.32",
   "description": "",
   "keywords": [],
   "module": "./dist/index.mjs",
@@ -15,8 +15,8 @@
   "author": "ajayojha",
   "license": "MIT",
   "dependencies": {
-    "@nattyjs/validation-decorators": "0.0.1-beta.28",
-    "@nattyjs/types":"0.0.1-beta.28"
+    "@nattyjs/validation-decorators": "0.0.1-beta.32",
+    "@nattyjs/types": "0.0.1-beta.32"
   },
   "devDependencies": {
     "unbuild": "1.2.1"
