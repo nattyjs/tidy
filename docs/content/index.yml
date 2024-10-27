@@ -1,0 +1,37 @@
+title: 'Effortless Form Validation for Modern Web Apps - @tidy'
+description: Build beautiful forms with Tidy.js - a lightweight & powerful library for clean validation, custom rules, & seamless user experience.
+navigation: false
+hero:
+  title: 'Effortless Form Validation'
+  description: 'Say Goodbye to Validation Hassle'
+  orientation: horizontal
+  links:
+    - label: Get started
+      icon: i-heroicons-arrow-right-20-solid
+      trailing: true
+      to: '/getting-started'
+      size: lg
+  code: |
+    ```bash [Terminal]
+    npm install @nattyjs/tidy
+    ```
+features:
+  title: 'Build Beautiful Forms with Powerful Validation Framework'
+  links:
+    - label: 'Explore @tidy'
+      color: 'gray'
+      to: '/getting-started'
+      size: lg
+  items:
+    - title: 'Simple and Declarative'
+      description: 'Write validation rules, simply & clearly.'
+    - title: 'Type Safe'
+      description: 'A fully typed development experience.'
+    - title: 'Built for Modern Web'
+      description: 'Modern by Design, Perfect for cutting-edge applications.'
+    - title: 'Intutive'
+      description: 'Effortless forms with clean validation & a maintainable codebase.'
+    - title: 'Asyncronous Validation'
+      description: 'Seamless checks, no waiting.'
+    - title: 'Customizable Validation'
+      description: 'Validation beyond the box.'
