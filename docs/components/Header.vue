@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import SunIcon from "./icon/sun.icon.vue";
 import GithubIcon from "./icon/github.icon.vue";
-import SearchIcon from "./icon/search.icon.vue";
+import ContentSearchButton from './ContentSearchButton.vue'
 </script>
 
 <template>
@@ -17,8 +16,8 @@ import SearchIcon from "./icon/search.icon.vue";
               class="px-2 ms-1.5 ring-1 ring-inset rounded-md text-xs py-1 text-center ring-green-300 bg-green-50 text-green-500 font-medium"
               >Docs</span
             >
-
           </div>
+          <ContentSearchButton />
           <div class="space-x-5 flex items-center">
             <span>
              <a href="https://github.com/nattyjs/tidy" target="_blank"> <github-icon class="w-5 fill-gray-700 cursor-pointer" /></a>
