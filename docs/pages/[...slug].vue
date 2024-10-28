@@ -62,8 +62,8 @@ console.log(page.value?._dir)
 
 <template>
   <div class="flex gap-x-8">
-    <div class="content w-9/12 py-5">
-    <div class="border-b">
+    <div class="content w-9/12 py-5 pb-20">
+    <div class="border-b pb-3 mb-3">
       <h2 class="text-4xl font-semibold py-5">{{ page?.title }}</h2>
       <h5 class="text-lg text-gray-500 tracking-wide leading-7 pb-5">{{ page?.description }}</h5>
     </div>
@@ -72,28 +72,28 @@ console.log(page.value?._dir)
       </ContentRenderer> -->
       <hr v-if="surround?.length" />
       <div v-if="surround" class="surround-div flex justify-end my-5 gap-x-5">
-        <div v-if="prev" class="prev w-1/2 h-48 border rounded-md hover:bg-gray-50 group px-5 py-4 transition-all duration-300">
+        <div v-if="prev" class="prev w-1/2 border rounded-md hover:bg-gray-50 group px-5 py-4 transition-all duration-300">
           <NuxtLink :to="prev._path">
-            <div v-if="prev" class="surround-prev space-y-3">
-              <div class="bg-gray-100 group-hover:bg-green-50 group-hover:border-green-200 px-2.5 py-2.5 transition-all duration-300 w-fit rounded-full border"><right-arrow-icon class="w-4 fill-gray-500 rotate-180"/></div>
+            <div v-if="prev" class="surround-prev space-y-3 py-2">
+              <div class="bg-slate-100 group-hover:bg-green-50 group-hover:border-green-400 px-2 py-2 transition-all duration-300 w-fit rounded-full border"><right-arrow-icon class="w-5 stroke-gray-900 group-hover:stroke-green-500 rotate-180"/></div>
               <h5 class="text-gray-800 font-medium">{{ prev.title }}</h5>
-              <p class="text-sm text-gray-400">{{ prev.description.slice(0,100)+'...' }}</p>
+              <p class="text-sm text-gray-400">{{ prev.description.slice(0,80)+'...' }}</p>
             </div>
           </NuxtLink>
         </div>
-        <div v-if="next" class="next text-right w-1/2 h-48 border rounded-md hover:bg-gray-50 px-5 py-4 group transition-all duration-300">
+        <div v-if="next" class="next text-right w-1/2 border rounded-md hover:bg-gray-50 px-5 py-4 group transition-all duration-300">
           <NuxtLink :to="next._path">
-            <div v-if="next" class="surround-next space-y-3 flex flex-col items-end">
-              <div class="bg-gray-100 group-hover:bg-green-50 group-hover:border-green-200 px-2.5 py-2.5 transition-all duration-300 w-fit rounded-full border"><right-arrow-icon class="w-4 fill-gray-500"/></div>
+            <div v-if="next" class="surround-next space-y-3 flex py-2 flex-col items-end">
+              <div class="bg-slate-100 group-hover:bg-green-50 group-hover:border-green-400 px-2 py-2 transition-all duration-300 w-fit rounded-full border"><right-arrow-icon class="w-5 stroke-gray-900 group-hover:stroke-green-500"/></div>
               <h5 class="text-gray-800 font-medium">{{ next.title }}</h5>
-              <p class="text-sm text-gray-400">{{ next.description.slice(0,100)+'...' }}</p>
+              <p class="text-sm text-gray-400">{{ next.description.slice(0,80)+'...' }}</p>
             </div>
           </NuxtLink>
         </div>
       </div>
     </div>
-    <div class="3/12 relative">
-      <div class="min-w-52 sticky right-0 top-24" v-if="toclinks.length>1">
+    <div class="3/12 relative pe-5 pb-3">
+      <div class="right-bar min-w-48 max-w-48 sticky right-0 top-24 max-h-[calc(100vh-110px)] overflow-y-auto" v-if="toclinks.length>1">
         <TocLinks :toclinks="toclinks" />
       </div>
     </div>
@@ -102,33 +102,37 @@ console.log(page.value?._dir)
 
 <style>
 #contentrenderer h1{
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   padding-top: 20px;
+  padding-bottom: 20px;
+  /* background-color: red */
 }
 #contentrenderer h2{
   font-size: 1.5rem;
   font-weight: 600;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding-top: 30px;
+  padding-bottom: 5px;
 }
 #contentrenderer h3{
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color:  rgb(0, 0, 0);
-  /* font-weight: 400; */
   padding-top: 20px;
 }
 #contentrenderer h4{
   font-size: 1rem;
   font-weight: 600;
-  padding: 15px 0;
+  padding-top: 15px;
   /* color: rgb(55 65 81); */
 }
 #contentrenderer p{
   font-size: 1rem;
   color: rgb(55 65 81);
   padding: 15px 0;
+  line-height: 1.5rem;
+  letter-spacing: 0.01em;
+  text-align: justify;
 }
 #contentrenderer p a{
   color: #00C16A;
@@ -137,26 +141,49 @@ console.log(page.value?._dir)
   color: #00C16A;
 }
 #contentrenderer ul{
-  padding: 10px 0;
-  padding-bottom: 0;
+  padding: 5px 0;
 }
 #contentrenderer ul li strong{
   font-size: 1rem;
-  color: rgb(34 197 94);
+  color: black;
   padding: 20px 0;
-  font-weight: 400;
+  font-weight: 500;
 }
 #contentrenderer ol li strong{
   font-size: 1rem;
-  color: rgb(34 197 94);
+  color: black;
   padding: 20px 0;
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
 }
 #contentrenderer ul li {
   font-size: 1rem;
-  color: rgb(55 65 81);
-  padding: 5px 0;
+  color: rgb(55, 65, 81);
+  padding: 3px 0;
+  list-style: none;
+  margin-left: 1rem;
+  padding-left: 1rem;
 }
+#contentrenderer ol li ul li {
+  font-size: 1rem;
+  color: rgb(55, 65, 81);
+  padding: 3px 0;
+  list-style: none;
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+
+#contentrenderer ul li::marker {
+  content: '•';
+  font-size: 1.2rem;
+  color: rgb(209 213 219);
+}
+#contentrenderer ol li ul li::marker {
+  content: '•';
+  font-size: 1.2rem;
+  color: rgb(209 213 219);
+}
+
 #contentrenderer ol li {
   font-size: 1rem;
   color: rgb(55 65 81);
@@ -164,42 +191,76 @@ console.log(page.value?._dir)
   list-style: decimal;
   margin-left: 20px;
 }
-#contentrenderer ol li code {
-  font-size: 1rem;
-  color: rgb(55 65 81);
-  background-color: rgb(243 244 246);
-  padding: 1px 3px;
-  border-radius: 5px;
-}
 #contentrenderer table {
   font-size: 1rem;
-  width: 100%;
-  border-radius: 50%;
-  text-align: left;
+  width: 75%;
+  margin: 15px 0;
 }
 #contentrenderer table thead{
-  background-color: rgb(249 250 251);
-  border-radius: 20px;
+  text-align: center;
+}
+#contentrenderer table tbody{
+  text-align: left;
 }
 #contentrenderer table thead tr th{
   font-size: 0.9rem;
-  color: rgb(75 85 99);
-  padding: 10px 20px;
+  color: rgb(17 24 39);
+  border-bottom: 1px solid  rgb(209 213 219);
+  padding: 10px 10px;
   font-weight: 500;
+}
+#contentrenderer table tbody tr{
+  border-bottom: 1px solid rgb(229 231 235);
+}
+#contentrenderer table tbody tr:last-child {
+  border-bottom: none;
 }
 #contentrenderer table tbody tr td{
   font-size: 0.9rem;
-  color: rgb(107 114 128);
-  padding: 8px 20px;
-  border-bottom: 1px solid rgb(243 244 246);
-  border-style: dashed;
+  color: rgb(55 65 81);
+  padding: 8px 6px;
 }
-pre  {
+#contentrenderer pre  {
   max-width: 640px;
   overflow-x: auto;
 }
-pre code {
+#contentrenderer pre code {
   font-size: 0.9rem;
+}
+#contentrenderer p code {
+    color: rgb(31 41 55);
+    font-weight: 600;
+    font-size: 0.875em;
+    background-color: rgb(248 250 252);
+    padding: 0 0.375rem;
+    display: inline-block;
+    border-radius: 0.375rem;
+    border: 1px solid rgb(203 213 225);
+}
+#contentrenderer li code {
+    color: rgb(31 41 55);
+    font-weight: 600;
+    font-size: 0.875em;
+    background-color: rgb(248 250 252);
+    padding: 0 0.375rem;
+    display: inline-block;
+    border-radius: 0.375rem;
+    border: 1px solid rgb(203 213 225);
+}
+#contentrenderer a code {
+    color: rgb(31 41 55);
+    font-weight: 600;
+    font-size: 0.875em;
+    background-color: rgb(248 250 252);
+    padding: 0 10px;
+    display: inline-block;
+    border-radius: 0.375rem;
+    border: 1px solid rgb(203 213 225);
+    border-style: dashed;
+}
+ hr{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 ::-webkit-scrollbar {
   height: 4px;
@@ -211,78 +272,19 @@ pre code {
 ::-webkit-scrollbar-thumb {
   background: rgba(161, 160, 160, 0.603);
 }
-/* ::-webkit-scrollbar-thumb:hover {
-  background: gray;
-} */
-/* pre{
-  max-width: 100%;
-  overflow-x: hidden;
-  background-color: rgba(238, 233, 233, 0.801);
-  padding: 10px;
-  border-radius: 5px;
-} */
-/* #contentrenderer pre code{
-  border-radius: 5px;
-  padding: 20px;
-  background-color: rgb(243 244 246);
-} */
-/* .surround-div{
-  display: flex;
-  width: 100%;
-  column-gap: 10px;
-  padding: 10px  0px;
 
+.right-bar::-webkit-scrollbar {
+  width: 2px;
 }
-.prev{
-  width: 50%;
-  padding: 5px 10px;
-  border: 1px solid rgb(209 213 219);
-  border-radius: 5px;
+.right-bar::-webkit-scrollbar-track {
+  background: white;
 }
-.prev h5{
-font-weight: 500;
-color: rgb(107 114 128);
+.right-bar::-webkit-scrollbar-thumb {
+  background: white;
 }
-.next{
-  width: 50%;
-  padding: 5px 10px;
-  border: 1px solid rgb(209 213 219);
-  border-radius: 5px;
+.right-bar::-webkit-scrollbar-thumb:hover {
+  background: white;
 }
-.next h5{
-font-weight: 500;
-color: rgb(107 114 128);
-} */
-
-
-/* main {
-  margin-top: 5px;
-  display: flex;
-}
-
-.content {
-  width: 70%;
-}
-.surround {
-  width: 370px;
-  padding: 1.5px;
-  padding-left: 10px;
-  border: 1px solid black;
-  height: 150px;
-  margin-right: 10px;
-}
-
-.surround-div {
-  display: flex;
-  max-width: 170px;
-}
-
-.prev {
-  margin-right: 20px;
-}
- .next {
-  margin-left: 30px;
-} */
 
 </style>
 

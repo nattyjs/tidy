@@ -1,5 +1,5 @@
 <template>
-  <div class="max-h-[calc(100vh-110px)] overflow-y-scroll pb-10 z-10">
+  <div class="max-h-[calc(100vh-100px)] overflow-y-scroll pb-3 z-10">
     <div v-for="(items, index) in navigation" :key="index">
       <h5 class="text-sm font-semibold text-gray-600 pt-4 pb-2">
         {{ items.title }}

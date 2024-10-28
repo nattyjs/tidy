@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
 import Header from './components/Header.vue'
+import Footer from './components/Footer.vue';
 
 
 const { seo } = useAppConfig()
@@ -22,11 +23,12 @@ provide('navigation', navigation)
   <div>
     <NuxtLoadingIndicator />
     <Header />
-      <NuxtLayout >
-        <NuxtPage />
-      </NuxtLayout>
+    <NuxtLayout >
+      <NuxtPage />
+    </NuxtLayout>
     <ClientOnly>
       <LazyUContentSearch :files="files" :navigation="navigation" />
     </ClientOnly>
+    <Footer />
   </div>
 </template>

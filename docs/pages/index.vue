@@ -2,7 +2,7 @@
 import CopyIcon from "~/components/icon/copy.icon.vue";
 import RightArrowIcon from "~/components/icon/right-arrow-icon.vue";
 import SafeCheckIcon from "~/components/icon/safe-check.icon.vue";
-import Footer from "~/components/Footer.vue";
+// import Footer from "~/components/Footer.vue";
 
 const { data: page } = await useAsyncData("index", () =>
   queryContent("/").findOne()
@@ -41,7 +41,7 @@ useSeoMeta({
               >
                 <span>{{ page?.hero.links[0].label }}</span>
                 <span>
-                  <right-arrow-icon class="w-3 fill-white" />
+                  <right-arrow-icon class="w-5 stroke-white" />
                 </span>
               </button>
             </NuxtLink>
@@ -79,7 +79,7 @@ useSeoMeta({
           <div
             v-for="item in page?.features?.items"
             :key="item?.title"
-            class="col-span-12 md:col-span-6 xl:col-span-4 border h-auto rounded-lg p-5 hover:bg-gray-50 cursor-pointer hover:border-green-400 transition-all duration-500 hover:-translate-y-1 hover:shadow-md  hover:bg-gradient-to-r from-white to-gray-100"
+            class="col-span-12 md:col-span-6 xl:col-span-4 border h-auto rounded-lg p-5 hover:bg-gray-50 cursor-pointer hover:border-green-400 transition-all duration-500 hover:-translate-y-1 hover:shadow-md"
           >
             <span>
               <safe-check-icon class="w-7 fill-gray-700" />
@@ -103,5 +103,4 @@ useSeoMeta({
       </div>
     </div>
   </div>
-  <Footer />
 </template>

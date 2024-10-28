@@ -6,8 +6,8 @@ import twitterIcon from "./icon/twitter.icon.vue";
 </script>
 
 <template>
-  <footer class="border-t sticky bottom-0 left-0 bg-white z-20">
-    <div class="py-5 max-lg:py-10">
+  <footer class="border-t bg-white z-20">
+    <div class="py-3.5 max-lg:py-10">
       <div class="max-w-7xl mx-auto px-6">
         <div
           class="lg:flex items-center lg:justify-between sm:max-md:flex-col sm:max-md:items-center max-lg:space-y-5"
@@ -18,9 +18,9 @@ import twitterIcon from "./icon/twitter.icon.vue";
            <a href="https://radixweb.com/" class="hover:underline"">Developed & Maintained By <b>Radixians</b></a>
           </p>
           <div
-            class="flex items-center lg:pe-4 space-x-4 max-lg:text-center lg:text-center md:order-1 lg:order-2"
+            class="flex items-center space-x-4 max-lg:text-center lg:text-center md:order-1 lg:order-2 p-2 rounded-md hover:bg-gray-50"
           >
-            <span><a href="https://github.com/nattyjs/tidy"><github-icon class="w-5 fill-gray-700 cursor-pointer" /></a></span>
+            <span><a href="https://github.com/nattyjs/tidy"><github-icon class="w-5 fill-gray-700 cursor-pointer hover:fill-gray-900" /></a></span>
           </div>
         </div>
       </div>
