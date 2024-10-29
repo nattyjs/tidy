@@ -7,6 +7,7 @@ import SafeCheckIcon from "~/components/icon/safe-check.icon.vue";
 const { data: page } = await useAsyncData("index", () =>
   queryContent("/").findOne()
 );
+const isCopied = ref(false);
 console.log(page);
 useSeoMeta({
   titleTemplate: "",
@@ -15,6 +16,15 @@ useSeoMeta({
   description: page.value.description,
   ogDescription: page.value.description,
 });
+
+
+// copy functionality pending....
+function copytoclipboard() {
+  isCopied.value = true;
+  setTimeout(() => {
+    isCopied.value = false;
+  }, 1000);
+}
 </script>
 
 <template>
@@ -37,7 +47,7 @@ useSeoMeta({
           <div class="">
             <NuxtLink :to="page?.hero.links[0].to">
               <button
-                class="border flex items-center gap-x-1.5 py-2 px-3 rounded-md bg-[#00C16A] tracking-wide text-sm font-medium text-white hover:bg-green-600"
+                class="border flex items-center gap-x-1.5 py-2 px-3 rounded-md bg-[#00C16A] tracking-wide text-sm font-medium text-white hover:bg-green-600 transition-all duration-300"
               >
                 <span>{{ page?.hero.links[0].label }}</span>
                 <span>
@@ -55,9 +65,25 @@ useSeoMeta({
               class="border py-3.5 px-4 rounded-t-md text-sm text-gray-600 tracking-wider flex justify-between"
             >
               <span><MDC :value="page?.hero.title" /></span>
-              <span>
+              <!-- <span>
                 <copy-icon class="w-4 fill-gray-600 hover:fill-gray-800 cursor-pointer" />
-              </span>
+              </span> -->
+              <div class="relative group">
+                <copy-icon
+                @click="copytoclipboard"
+                  class="w-4 fill-gray-500 hover:fill-gray-700 cursor-pointer"
+                />
+                <span
+                  v-if="!isCopied"
+                  class="absolute -right-12 -top-7 px-2 py-[3px] invisible opacity-0 group-hover:opacity-100 group-hover:visible text-nowrap text-xs text-gray-600 bg-white shadow-lg rounded-md border border-gray-100 transition-all duration-300"
+                  >Copy to clipboard</span
+                >
+                <span
+                  v-if="isCopied"
+                  class="absolute -right-5 -top-7 px-2 py-[3px] text-nowrap text-xs text-gray-600 bg-white shadow-lg rounded-md border border-gray-100 transition-all duration-300"
+                  >Copied</span
+                >
+              </div>
             </div>
             <p
               class="border py-3.5 px-4 rounded-b-md border-t-0 tracking-wider text-green-500 font-medium bg-gray-50"
@@ -79,10 +105,13 @@ useSeoMeta({
           <div
             v-for="item in page?.features?.items"
             :key="item?.title"
-            class="col-span-12 md:col-span-6 xl:col-span-4 border h-auto rounded-lg p-5 hover:bg-gray-50 cursor-pointer hover:border-green-400 transition-all duration-500 hover:-translate-y-1 hover:shadow-md"
+            class="col-span-12 md:col-span-6 xl:col-span-4 border h-auto rounded-lg p-5 cursor-pointer hover:border-green-400 transition-all duration-500 hover:-translate-y-1 hover:shadow-lg group"
           >
+            {{ console.log(item.index) }}
             <span>
-              <safe-check-icon class="w-7 fill-gray-700" />
+              <safe-check-icon
+                class="w-7 fill-gray-700 group-hover:fill-gray-800 transition-all duration-300"
+              />
             </span>
             <p class="pt-2 text-base font-semibold text-gray-700">
               {{ item?.title }}
@@ -93,7 +122,7 @@ useSeoMeta({
           </div>
         </div>
         <div
-          class=" flex items-center gap-x-2 mt-24 mb-10 py-1.5 px-5 border border-gray-300 rounded-md font-medium text-gray-600 text-sm bg-gray-50 hover:bg-gray-100 cursor-pointer transition-all duration-300"
+          class="flex items-center gap-x-2 mt-24 mb-10 py-1.5 px-5 border border-gray-300 rounded-md font-medium text-gray-600 text-sm bg-slate-50 hover:bg-slate-100 cursor-pointer transition-all duration-300"
         >
           <NuxtLink :to="page?.features?.links[0].to">{{
             page?.features.links[0].label
