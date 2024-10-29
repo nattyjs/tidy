@@ -98,7 +98,7 @@ useSeoMeta({
           <NuxtLink :to="page?.features?.links[0].to">{{
             page?.features.links[0].label
           }}</NuxtLink>
-          <span><right-arrow-icon class="w-3 fill-gray-500 translate-y-[1px]" /></span>
+          <!-- <span><right-arrow-icon class="w-3 fill-gray-500 translate-y-[1px]" /></span> -->
         </div>
       </div>
     </div>

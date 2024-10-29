@@ -46,7 +46,7 @@ console.log(tabs.value);
 </script>
 
 <template>
-  <div class="relative border rounded-md my-4">
+  <div class="relative border rounded-md my-4 max-xl:max-w-lg">
     <div v-if="tabs.label !== '0'" class="flex items-center justify-between px-2 py-3 border-b">
       <div class="flex items-center gap-x-2 px-3">
         <span v-if="tabs.label !== '0'"><terminal-icon class="w-3.5 fill-gray-600" /></span>
