@@ -20,8 +20,8 @@ import SearchIcon from "./icon/search.icon.vue";
 
           </div>
           <div class="space-x-5 flex items-center">
-            <span>
-             <a href="https://github.com/nattyjs/tidy" target="_blank"> <github-icon class="w-5 fill-gray-700 cursor-pointer" /></a>
+            <span class="p-2 hover:bg-gray-50 rounded-md">
+             <a href="https://github.com/nattyjs/tidy" target="_blank"> <github-icon class="w-5 fill-gray-700 cursor-pointer hover:fill-gray-900" /></a>
             </span>
           </div>
         </nav>
